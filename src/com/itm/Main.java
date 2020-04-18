@@ -21,17 +21,17 @@ public class Main {
 
         System.out.println("////////////////////////////////\n");
 
-        while (romanNumber != "exit") {
+        while (!romanNumber.equals("exit")) {
             System.out.println("Ingrese un número romano: ");
             romanNumber = scanner.nextLine();
 
             Context context = new Context(romanNumber);
 
             ArrayList<Expression> expressions = new ArrayList<>();
-            expressions.add(new ThousandExpression());
-            expressions.add(new HundredExpression());
-            expressions.add(new TenExpression());
-            expressions.add(new UnitExpression());
+                expressions.add(new ThousandExpression());
+                expressions.add(new HundredExpression());
+                expressions.add(new TenExpression());
+                expressions.add(new UnitExpression());
 
             Iterator<Expression> iterator = expressions.iterator();
             while (iterator.hasNext()) {
